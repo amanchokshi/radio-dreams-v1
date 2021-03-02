@@ -6,11 +6,12 @@ class Telescope:
     """Calculate local X, Y, Z coordinates of an a array's antennas."""
 
     def __init__(self, array_csv, latitude):
-        self.array_dir = array_csv
+        self.array_csv = array_csv
         self.latitude = latitude
 
     def read_array(self):
 
+        print(self.array_csv)
         df = pd.read_csv(self.array_csv)
         e = df["East"].to_numpy()
         n = df["North"].to_numpy()
@@ -22,6 +23,7 @@ class Telescope:
 
 if __name__ == "__main__":
 
-    mwa = Telescope("../data/arrays/mwa_phase2.csv")
+    mwa = Telescope("../arrays/mwa_phase2.csv", -27.0)
 
     print(mwa.read_array()[0])
+    print(mwa.read_array()[1][-1])
