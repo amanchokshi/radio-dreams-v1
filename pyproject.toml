@@ -9,6 +9,9 @@ homepage = "https://github.com/amanchokshi/radio-dreams"
 repository = "https://github.com/amanchokshi/radio-dreams"
 authors = ["Aman Chokshi <achokshi@student.unimelb.edu.au>"]
 
+[tool.poetry.scripts]
+radio-dreams = "radio_dreams.console:main"
+
 [tool.poetry.dependencies]
 python = "^3.7"
 numpy = "^1.20.1"
