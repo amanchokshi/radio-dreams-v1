@@ -3,7 +3,7 @@ Radio Dreams
 
 |PyPI| |License| |Python| |Black|
 
-An Imagined Interferometer
+Imagined Interferometers
 
 
 .. |PyPI| image:: https://img.shields.io/pypi/v/radio-dreams.svg?color=green&logo=python&logoColor=white&label=PyPI
