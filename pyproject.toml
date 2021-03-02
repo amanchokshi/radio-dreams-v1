@@ -11,6 +11,7 @@ authors = ["Aman Chokshi <achokshi@student.unimelb.edu.au>"]
 
 [tool.poetry.scripts]
 radio-dreams = "radio_dreams.console:main"
+plot-array = "radio_dreams.console:plot_array"
 
 [tool.poetry.dependencies]
 python = "^3.7"
