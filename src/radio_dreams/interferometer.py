@@ -28,7 +28,7 @@ class ArrayConfig:
         mwa_latitude = -26.7033194444
 
         # An instance of the interferometer.ArrayConfig class for the MWA
-        mwa = interferometer.ArrayConfig(array_csv="../arrays/mwa_phase2.csv", latitude=mwa_latitude)
+        mwa = interferometer.ArrayConfig(array_csv="../arrays/mwa_phase2.csv")
 
         # Access the original E, N, H positions of tiles and tile names
         E = mwa.east
@@ -37,14 +37,13 @@ class ArrayConfig:
         T = mwa.tiles
 
         # Access X, Y, Z coordinates of tiles
-        x, y, z = mwa.enh_xyz()
+        x, y, z = mwa.enh_xyz(latitude=mwa_latitude)
 
 
     """
 
-    def __init__(self, array_csv, latitude):
+    def __init__(self, array_csv):
         self.array_csv = array_csv
-        self.latitude = latitude
 
         # Read array layout csv file
         df = pd.read_csv(self.array_csv)
@@ -53,11 +52,11 @@ class ArrayConfig:
         self.height = df["Height"].to_numpy()
         self.tiles = df["Tile"]
 
-    def enh_xyz(self):
+    def enh_xyz(self, latitude):
         """Convert from local E, N, H to X, Y, Z coordinates"""
 
-        sin_lat = np.sin(self.latitude)
-        cos_lat = np.cos(self.latitude)
+        sin_lat = np.sin(latitude)
+        cos_lat = np.cos(latitude)
 
         x = self.height * cos_lat - self.north * sin_lat
         y = self.east
