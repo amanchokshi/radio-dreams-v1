@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # Ignore out_dir
-./dream-plots/*
+dream-plots/*
