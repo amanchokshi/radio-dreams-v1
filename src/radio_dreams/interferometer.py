@@ -51,10 +51,7 @@ class ArrayConfig:
         self.east = df["East"].to_numpy()
         self.north = df["North"].to_numpy()
         self.height = df["Height"].to_numpy()
-
-        # Check if tile names provided
-        if "Tile" in df.keys():
-            self.tiles = df["Tile"]
+        self.tiles = df["Tile"]
 
     def enh_xyz(self):
         """Convert from local E, N, H to X, Y, Z coordinates"""
