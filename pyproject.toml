@@ -10,7 +10,7 @@ repository = "https://github.com/amanchokshi/radio-dreams"
 authors = ["Aman Chokshi <achokshi@student.unimelb.edu.au>"]
 
 [tool.poetry.scripts]
-radio-dreams = "radio_dreams.console:main"
+radio-dreams = "radio_dreams.console:radio_dreams"
 plot-array = "radio_dreams.console:plot_array"
 
 [tool.poetry.dependencies]
@@ -24,6 +24,7 @@ pandas = "^1.1"
 click = "^7.1.2"
 
 [tool.poetry.dev-dependencies]
+pytest = "^6"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
