@@ -10,8 +10,8 @@ test_data = path.abspath(path.join(dirpath, "../test_data"))
 
 
 def test_ArrayConfig():
-    mwa = ArrayConfig(array_csv=f"{test_data}/test_mwa.csv", latitude=-27)
-    x, y, z = mwa.enh_xyz()
+    mwa = ArrayConfig(array_csv=f"{test_data}/test_mwa.csv")
+    x, y, z = mwa.enh_xyz(latitude=-27)
 
     # Test __init__
     assert mwa.east[0] == -1999.81
