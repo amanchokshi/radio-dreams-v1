@@ -25,6 +25,19 @@ click = "^7.1.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6"
+coverage = {extras = ["toml"], version = "^5.5"}
+pytest-cov = "^2.11.1"
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["radio_dreams"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 100
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
