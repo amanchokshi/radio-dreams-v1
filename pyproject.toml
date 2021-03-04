@@ -10,10 +10,6 @@ repository = "https://github.com/amanchokshi/radio-dreams"
 documentation = "https://radio-dreams.readthedocs.io"
 authors = ["Aman Chokshi <achokshi@student.unimelb.edu.au>"]
 
-[tool.poetry.scripts]
-radio-dreams = "radio_dreams.console:radio_dreams"
-plot-array = "radio_dreams.console:plot_array"
-
 [tool.poetry.dependencies]
 python = "^3.7"
 numpy = "^1.20.1"
