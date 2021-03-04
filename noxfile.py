@@ -18,7 +18,7 @@ def install_with_constraints(session, *args, **kwargs):
 
 
 # Nox sessions to run
-nox.options.sessions = "lint", "tests"
+nox.options.sessions = "lint", "mypy", "tests"
 
 
 # Pytest - unit tests
