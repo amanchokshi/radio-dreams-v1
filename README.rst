@@ -3,7 +3,7 @@ Radio Dreams
 
 |PyPI| |GitHub| |Coverage| |ReadTheDocs| |License| |Python| |Black|
 
-Imagined Interferometers
+*radio-dreams* - a python playground to learn how interferometers work and dream up any possible array
 
 .. |PyPI| image:: https://img.shields.io/pypi/v/radio-dreams.svg?color=green&logo=python&logoColor=white&label=PyPI
     :target: https://pypi.org/project/radio-dreams/
