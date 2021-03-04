@@ -47,7 +47,7 @@ def black(session):
 
 
 # Locations to lint
-locations = "src", "tests", "noxfile.py"
+locations = "src", "tests", "noxfile.py", "docs/conf.py"
 
 
 # Flake8 - linting of various kinds
@@ -76,3 +76,11 @@ def tests(session):
         session, "coverage[toml]", "pytest", "pytest-cov", "pytest-mock"
     )
     session.run("pytest", "--cov")
+
+
+# Sphinx - build documentation
+@nox.session(python="3.8")
+def docs(session):
+    """Build the documentation."""
+    install_with_constraints(session, "sphinx")
+    session.run("sphinx-build", "docs", "docs/_build")
