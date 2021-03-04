@@ -3,9 +3,7 @@ from pathlib import Path
 import click
 from matplotlib import pyplot as plt
 
-from radio_dreams import interferometer
-
-from . import __version__
+from radio_dreams import __version__, interferometer
 
 
 @click.command()
@@ -20,7 +18,9 @@ def radio_dreams():
 
 
 @click.command()
-@click.option("--array_csv", help="Path to array layout csv file", type=str, required=True)
+@click.option(
+    "--array_csv", help="Path to array layout csv file", type=str, required=True
+)
 @click.option(
     "--out_dir",
     help="Output directory to save plots",

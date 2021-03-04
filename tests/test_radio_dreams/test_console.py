@@ -3,6 +3,7 @@ from pathlib import Path
 
 import click.testing
 import pytest
+
 from radio_dreams import console
 
 # Save the path to this directory

@@ -24,9 +24,9 @@ def test_ArrayConfig():
     assert y[0] == -1999.81
     assert z[0] == -554.4790283870071
 
+
 def test_ArrayConfig_no_latitude(capfd):
     ArrayConfig(array_csv=f"{test_data}/test_mwa.csv").enh_xyz()
 
     out, err = capfd.readouterr()
     assert "missing 1 required positional argument" in out
-
