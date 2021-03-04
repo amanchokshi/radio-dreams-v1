@@ -29,7 +29,7 @@ Here are the essential project links:
     :target: https://pypi.org/project/radio-dreams/
     :alt: PyPI - Latest Release
 
-.. |GitHub| image:: https://img.shields.io/github/workflow/status/amanchokshi/radio-dreams/Tests?color=green&logo=github&logoColor=white&label=Actions
+.. |GitHub| image:: https://img.shields.io/github/workflow/status/amanchokshi/radio-dreams/Tests?color=green&logo=github&logoColor=white&label=Tests
     :target: https://github.com/amanchokshi/radio-dreams/actions
     :alt: GitHub Actions - Build Status
 
