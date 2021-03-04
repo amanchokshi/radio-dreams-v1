@@ -78,6 +78,14 @@ def tests(session):
     session.run("pytest", "--cov")
 
 
+@nox.session(python="3.8")
+def coverage(session):
+    """Upload coverage data."""
+    install_with_constraints(session, "coverage[toml]", "codecov")
+    session.run("coverage", "xml", "--fail-under=0")
+    session.run("codecov", *session.posargs)
+
+
 # Sphinx - build documentation
 @nox.session(python="3.8")
 def docs(session):
