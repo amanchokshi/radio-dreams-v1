@@ -6,7 +6,7 @@ Radio Dreams
 -------------------------------------------------------------------
 
 *A python playground to learn how interferometers work by dreaming up imaginary arrays*
----------------------------------------------------------------------------------------
+.......................................................................................
 
 *radio-dreams* is designed to install cleanly with a single invocation of the standard Python package tool::
 
