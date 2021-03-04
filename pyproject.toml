@@ -43,6 +43,7 @@ source = ["src", "*/site-packages"]
 [tool.coverage.run]
 branch = true
 source = ["radio_dreams"]
+omit = ["src/radio_dreams/__init__.py"]
 
 [tool.coverage.report]
 show_missing = true

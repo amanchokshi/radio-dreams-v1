@@ -5,6 +5,11 @@ import tempfile
 import nox
 
 
+package = "radio_dreams"
+nox.options.sessions = "lint", "tests"
+locations = "src", "tests", "noxfile.py", "docs/conf.py"
+
+
 def install_with_constraints(session, *args, **kwargs):
     """Install packages constrained by Poetry's lock file.
 
@@ -33,10 +38,6 @@ def install_with_constraints(session, *args, **kwargs):
         session.install(f"--constraint={requirements.name}", *args, **kwargs)
 
 
-# Nox sessions to run
-nox.options.sessions = "lint", "tests"
-
-
 # Black - the uncompromising Python code formatter
 @nox.session(python="3.8")
 def black(session):
@@ -44,10 +45,6 @@ def black(session):
     args = session.posargs or locations
     install_with_constraints(session, "black")
     session.run("black", *args)
-
-
-# Locations to lint
-locations = "src", "tests", "noxfile.py", "docs/conf.py"
 
 
 # Flake8 - linting of various kinds
