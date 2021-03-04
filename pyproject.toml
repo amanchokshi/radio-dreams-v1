@@ -7,6 +7,7 @@ description = "Imagined Interferometers"
 keywords = ["radio", "interferometer", "simulator"]
 homepage = "https://github.com/amanchokshi/radio-dreams"
 repository = "https://github.com/amanchokshi/radio-dreams"
+documentation = "https://radio-dreams.readthedocs.io"
 authors = ["Aman Chokshi <achokshi@student.unimelb.edu.au>"]
 
 [tool.poetry.scripts]
