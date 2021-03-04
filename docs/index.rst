@@ -2,7 +2,7 @@
  The Radio Dreams Python Project
 =================================
 
-*radio-dreams* - a python playground to learn how interferometers work and dream up any possible array'
+*radio-dreams* - a python playground to learn how interferometers work and dream up any possible array
 
     - Written in pure Python and installs without any complication
     - Support Python 3.7+
