@@ -3,7 +3,25 @@ Radio Dreams
 
 |PyPI| |GitHub| |Coverage| |ReadTheDocs| |License| |Python| |Black|
 
-*radio-dreams* - a python playground to learn how interferometers work and dream up any possible array
+-------------------------------------------------------------------
+
+A python playground to learn how interferometers work by dreaming up imaginary arrays. *radio-dreams* is designed to install cleanly with a single invocation of the standard Python package tool::
+
+    $ pip install radio-dreams
+
+Here are the essential project links:
+
+* `Home page and documentation <https://radio-dreams.readthedocs.io>`_
+
+* `Installing radio-dreams <https://radio-dreams.readthedocs.io/installation.html>`_
+
+* `Example dreams <https://radio-dreams.readthedocs.io/exampledreams.html>`_
+
+* `radio-dreams package <https://pypi.org/project/radio-dreams/>`_ on the Python Package Index
+
+* `Contributing to radio-dreams <https://github.com/amanchokshi/radio-dreams/blob/master/contrib.rst>`_
+
+* `Issue tracker <https://github.com/amanchokshi/radio-dreams/issues>`_ on GitHub
 
 .. |PyPI| image:: https://img.shields.io/pypi/v/radio-dreams.svg?color=green&logo=python&logoColor=white&label=PyPI
     :target: https://pypi.org/project/radio-dreams/
