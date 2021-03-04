@@ -1,7 +1,7 @@
 Radio Dreams
 ============
 
-|PyPI| |GitHub| |License| |Python| |Black|
+|PyPI| |GitHub| |Coverage| |License| |Python| |Black|
 
 Imagined Interferometers
 
