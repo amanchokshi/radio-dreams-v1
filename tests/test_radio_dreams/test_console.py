@@ -33,4 +33,4 @@ def test_plot_array_succeeds(runner):
     assert array_png.is_file()
 
     if array_png.is_file():
-        array_png.unlink(missing_ok=False)
+        array_png.unlink()
