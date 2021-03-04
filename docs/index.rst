@@ -22,7 +22,7 @@ Documentation
 
 The source code and issue tracker live on other web sites:
 
-* `Embers on the Python Package Index <https://pypi.org/project/radio-dreams/>`_
+* `Radio Dreams on the Python Package Index <https://pypi.org/project/radio-dreams/>`_
 
 * `GitHub repository <https://github.com/amanchokshi/radio-dreams/>`_
 
