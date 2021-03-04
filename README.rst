@@ -13,11 +13,11 @@ A python playground to learn how interferometers work by dreaming up imaginary a
 
 Here are the essential project links:
 
-* `Home page and documentation <https://radio-dreams.readthedocs.io>`_
+* `Home page and documentation <https://radio-dreams.readthedocs.io/en/latest/>`_
 
-* `Installing radio-dreams <https://radio-dreams.readthedocs.io/installation.html>`_
+* `Installing radio-dreams <https://radio-dreams.readthedocs.io/en/latest/installation.html>`_
 
-* `Example dreams <https://radio-dreams.readthedocs.io/exampledreams.html>`_
+* `Example dreams <https://radio-dreams.readthedocs.io/en/latest/exampledreams.html>`_
 
 * `radio-dreams package <https://pypi.org/project/radio-dreams/>`_ on the Python Package Index
 
