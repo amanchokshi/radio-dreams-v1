@@ -1,9 +1,11 @@
+"""Classes and methods describing the functionality of an interferometer."""
+
 import numpy as np
 import pandas as pd
 
 
 class ArrayConfig:
-    """A class used to represent the positions of antennas in an interferometer
+    """A class used to represent the positions of antennas in an interferometer.
 
     Antenna positions are usually defined with respect to the array centre.
 
@@ -43,7 +45,7 @@ class ArrayConfig:
     """
 
     def __init__(self, array_csv, latitude=None):
-
+        """Assign variables and read array layout file."""
         self.array_csv = array_csv
         self.latitude = latitude
 
@@ -55,8 +57,7 @@ class ArrayConfig:
         self.tiles = df["Tile"]
 
     def enh_xyz(self):
-        """Convert from local E, N, H to X, Y, Z coordinates"""
-
+        """Convert from local E, N, H to X, Y, Z coordinates."""
         if self.latitude is not None:
             sin_lat = np.sin(self.latitude)
             cos_lat = np.cos(self.latitude)

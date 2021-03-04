@@ -1,3 +1,5 @@
+"""Tests radio_dreams.interferometer."""
+
 from os import path
 
 from radio_dreams.interferometer import ArrayConfig
@@ -10,6 +12,7 @@ test_data = path.abspath(path.join(dirpath, "../test_data"))
 
 
 def test_ArrayConfig():
+    """Instance of ArrayConfig with test_mwa.csv array to test outputs."""
     mwa = ArrayConfig(array_csv=f"{test_data}/test_mwa.csv", latitude=-27)
     x, y, z = mwa.enh_xyz()
 
@@ -26,6 +29,7 @@ def test_ArrayConfig():
 
 
 def test_ArrayConfig_no_latitude(capfd):
+    """It prints exception for missing latitude arg."""
     ArrayConfig(array_csv=f"{test_data}/test_mwa.csv").enh_xyz()
 
     out, err = capfd.readouterr()

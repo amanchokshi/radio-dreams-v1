@@ -1,3 +1,5 @@
+"""Test radio_dreams.console.py."""
+
 from os import path
 from pathlib import Path
 
@@ -15,15 +17,18 @@ test_data = path.abspath(path.join(dirpath, "../test_data"))
 
 @pytest.fixture
 def runner():
+    """Fixture for invoking command-line interfaces."""
     return click.testing.CliRunner()
 
 
 def test_radio_dreams_succeeds(runner):
+    """It exits with a status code of zero."""
     result = runner.invoke(console.radio_dreams)
     assert result.exit_code == 0
 
 
 def test_plot_array_succeeds(runner):
+    """It tests if plot is saved then deletes it."""
     result = runner.invoke(
         console.plot_array,
         [f"--array_csv={test_data}/test_mwa.csv", f"--out_dir={test_data}"],

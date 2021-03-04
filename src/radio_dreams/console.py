@@ -1,3 +1,5 @@
+"""Command-line interface."""
+
 from pathlib import Path
 
 import click
@@ -9,8 +11,7 @@ from radio_dreams import __version__, interferometer
 @click.command()
 @click.version_option(version=__version__)
 def radio_dreams():
-    """The Radio Dreams Python project."""
-
+    """Radio Dreams python project."""
     click.secho("Radio Dreams\n", fg="blue")
 
     print("Author: Aman Chokshi")
@@ -29,8 +30,7 @@ def radio_dreams():
     show_default=True,
 )
 def plot_array(array_csv, out_dir):
-    """Plot the layout antennas for an interferometer"""
-
+    """Plot the layout antennas for an interferometer."""
     array_csv = Path(array_csv)
     mwa = interferometer.ArrayConfig(array_csv=array_csv)
 
