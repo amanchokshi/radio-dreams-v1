@@ -9,7 +9,7 @@ Imagined Interferometers
     :target: https://pypi.org/project/radio-dreams/
     :alt: PyPI - Latest Release
 
-.. |GitHub| image:: https://img.shields.io/github/workflow/status/amanchokshi/radio-dreams/Test?color=green&logo=github&logoColor=white&label=Actions
+.. |GitHub| image:: https://img.shields.io/github/workflow/status/amanchokshi/radio-dreams/Test?logo=github&logoColor=white&label=Actions
     :target: https://github.com/amanchokshi/radio-dreams/actions
     :alt: GitHub Actions - Build Status
 
