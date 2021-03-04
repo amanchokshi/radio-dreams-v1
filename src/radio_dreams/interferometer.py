@@ -42,8 +42,10 @@ class ArrayConfig:
 
     """
 
-    def __init__(self, array_csv):
+    def __init__(self, array_csv, latitude=None):
+
         self.array_csv = array_csv
+        self.latitude = latitude
 
         # Read array layout csv file
         df = pd.read_csv(self.array_csv)
@@ -52,14 +54,20 @@ class ArrayConfig:
         self.height = df["Height"].to_numpy()
         self.tiles = df["Tile"]
 
-    def enh_xyz(self, latitude):
+    def enh_xyz(self):
         """Convert from local E, N, H to X, Y, Z coordinates"""
 
-        sin_lat = np.sin(latitude)
-        cos_lat = np.cos(latitude)
+        if self.latitude is not None:
+            sin_lat = np.sin(self.latitude)
+            cos_lat = np.cos(self.latitude)
 
-        x = self.height * cos_lat - self.north * sin_lat
-        y = self.east
-        z = self.height * sin_lat + self.north * sin_lat
+            x = self.height * cos_lat - self.north * sin_lat
+            y = self.east
+            z = self.height * sin_lat + self.north * sin_lat
 
-        return x, y, z
+            return x, y, z
+
+        else:
+            print(
+                " ** INFO: enh_xyz() missing 1 required positional argument: 'latitude'"
+            )
