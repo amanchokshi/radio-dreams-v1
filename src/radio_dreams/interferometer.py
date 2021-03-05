@@ -44,10 +44,15 @@ class ArrayConfig:
 
     """
 
-    def __init__(self, array_csv, latitude=None):
+    def __init__(
+        self, array_csv, latitude=None, freq_start=None, freq_bands=None, bandwidth=None
+    ):
         """Assign variables and read array layout file."""
         self.array_csv = array_csv
         self.latitude = latitude
+        self.freq_start = freq_start
+        self.freq_bands = freq_bands
+        self.bandwidth = bandwidth
 
         # Read array layout csv file
         df = pd.read_csv(self.array_csv)
@@ -69,6 +74,21 @@ class ArrayConfig:
             return x, y, z
 
         else:
+            print(" ** INFO: enh_xyz() missing 1 required argument: 'latitude'")
+
+    def freqs(self):
+        """Create frequency array for interferometer."""
+        if None not in [self.freq_start, self.freq_bands, self.bandwidth]:
+            freqs = np.arange(
+                self.freq_start,
+                self.freq_start + self.freq_bands * self.bandwidth,
+                self.bandwidth,
+            )
+
+            return freqs
+
+        else:
             print(
-                " ** INFO: enh_xyz() missing 1 required positional argument: 'latitude'"
+                " ** INFO: freqs() missing required arguments:"
+                " 'freq_start', 'freq_bands', 'bandwidth'"
             )

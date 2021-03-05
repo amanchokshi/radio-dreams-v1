@@ -28,9 +28,30 @@ def test_ArrayConfig():
     assert z[0] == -554.4790283870071
 
 
-def test_ArrayConfig_no_latitude(capfd):
+def test_ArrayConfig_no_args(capfd):
     """It prints exception for missing latitude arg."""
     ArrayConfig(array_csv=f"{test_data}/test_mwa.csv").enh_xyz()
 
     out, err = capfd.readouterr()
-    assert "missing 1 required positional argument" in out
+    assert "missing 1 required argument: 'latitude'" in out
+
+
+def test_ArrayConfig_freqs():
+    """It outputs freq array and compares results."""
+    mwa = ArrayConfig(
+        array_csv=f"{test_data}/test_mwa.csv",
+        latitude=-27,
+        freq_start=160e6,
+        freq_bands=24,
+        bandwidth=1 * +6,
+    )
+
+    assert mwa.freqs()[0] == 160.0e6
+
+
+def test_ArrayConfig_freqs_no_args(capfd):
+    """It prints exception for missing args."""
+    ArrayConfig(array_csv=f"{test_data}/test_mwa.csv", latitude=-27).freqs()
+
+    out, err = capfd.readouterr()
+    assert "missing required arguments" in out
